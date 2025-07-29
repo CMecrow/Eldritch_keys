@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Eldritch Keys</title>
+</head>
+<body>
+<nav>
+    <a href="/">Feed</a>
+    <a href="/org">Organisation Structure</a>
+    <a href="/finance">Financial Accounting</a>
+    <a href="/materials">Materials Management</a>
+    <a href="/sales">Sales and Delivery</a>
+</nav>
+<div>
+    <h3>Organisational Structure</h3>
+    <hr>
+    <table>
+        <thead>
+        <tr>
+            <th>Scope</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="organisation : ${organisation}">
+            <td th:text="${organisation.scope}"></td>
+            <td th:text="${organisation.code}"></td>
+            <td th:text="${organisation.description}"></td>
+            <td th:text="${organisation.notes}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+</div>
+</body>
+</html>
