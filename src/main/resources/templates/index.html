@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Eldritch Keys</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
 </head>
 <body>
+<header class="banner">
+    <h1>Eldritch Keys</h1>
+</header>
 <nav>
     <a href="/">Home</a>
     <a href="/org">Organisation Structure</a>
-    <a href="/finance">Financial Accounting</a>
-    <a href="/materials">Materials Management</a>
-    <a href="/sales">Sales and Delivery</a>
+    <a href="/data">ERP Modules</a>
 </nav>
 <div>
     <h3>Business Details</h3>
@@ -23,6 +25,22 @@
         <li>ERP Modules - Financial Accounting, Materials Management, Sales and Distribution</li>
     </ul>
     <hr>
+</div>
+<div>
+    <div>
+        <h3>Eldritch Keys</h3>
+        <p>On the misty clifftops of Cornwall, Eldritch Keys forges pianos that whisper with otherworldly resonance. Each instrument is crafted from driftwood wood and tuned to awaken something just beyond the veil of sound. Once the music starts, it may never truly stop.</p>
+    </div>
+    <hr>
+    <div>
+        <h4>Products</h4>
+        <div th:each="product : ${products}">
+            <div>
+                <h5 th:text="${product.name}"></h5>
+                <p th:text="${product.description}"></p>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

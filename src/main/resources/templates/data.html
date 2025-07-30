@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Eldritch Keys</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+</head>
+<body>
+<header class="banner">
+    <h1>Eldritch Keys</h1>
+</header>
+<nav>
+    <a href="/">Home</a>
+    <a href="/org">Organisation Structure</a>
+    <a href="/data">ERP Modules</a>
+</nav>
+<div>
+    <h3>Data Tables</h3>
+    <hr>
+    <h4>Materials</h4>
+    <table class="materials">
+        <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="material : ${materials}">
+            <td th:text="${material.code}"></td>
+            <td th:text="${material.name}"></td>
+            <td th:text="${material.type}"></td>
+            <td th:text="${material.description}"></td>
+            <td th:text="${material.notes}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div>
+    <h4>Vendors</h4>
+    <table class="vendors">
+        <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vendor : ${vendors}">
+            <td th:text="${vendor.code}"></td>
+            <td th:text="${vendor.name}"></td>
+            <td th:text="${vendor.location}"></td>
+            <td th:text="${vendor.notes}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div>
+    <h4>Customers</h4>
+    <table class="customers">
+        <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="customer : ${customers}">
+            <td th:text="${customer.code}"></td>
+            <td th:text="${customer.name}"></td>
+            <td th:text="${customer.location}"></td>
+            <td th:text="${customer.notes}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+</body>
+</html>

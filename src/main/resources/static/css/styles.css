@@ -1,0 +1,173 @@
+/* Global spooky font and colors */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Roboto+Slab&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color: #0d0d0f;
+    color: #d1c7b7;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Banner styling */
+.banner {
+    background: linear-gradient(90deg, #0b0b0d, #0d220d);
+    border-bottom: 3px solid #1f4d1f;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 20;
+    box-shadow: inset 0 -4px 6px rgba(31, 77, 31, 0.7);
+}
+
+.banner h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #c8b68a;
+    margin: 0;
+    user-select: none;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 10; /* Ensure text stays above background */
+}
+
+/* Optional underline for polish */
+.banner h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 10px auto 0;
+    background: #a0b083;
+    border-radius: 2px;
+    opacity: 0.7;
+}
+
+
+h3, h4, h5 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #a0e6a0;
+    text-shadow: 0 0 8px rgba(0, 255, 100, 0.4);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #111;
+    padding: 15px 0;
+    border-bottom: 2px solid #222;
+    position: relative;
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c8b68a;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+    color: #8af7a0;
+    text-shadow: 0 0 10px rgba(100, 255, 150, 0.6);
+}
+
+/* Containers */
+div {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    border-left: 4px solid #222;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+/* Tables base */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(30, 30, 35, 0.9);
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(0, 255, 100, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+thead {
+    background: #151515;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    color: #8af7a0;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    color: #e0dcd3;
+}
+
+tr:hover {
+    background-color: rgba(0, 50, 20, 0.4);
+    transition: background 0.3s;
+}
+
+/* Horizontal lines */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #2f4f2f, transparent);
+    margin: 20px 0;
+}
+
+/* Product cards (index page) */
+div[th\\:each="product : ${products}"] > div {
+    background: rgba(20, 20, 25, 0.95);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 100, 0.1);
+}
+
+div[th\\:each="product : ${products}"] h5 {
+    margin: 0 0 5px 0;
+    color: #a0e6a0;
+}
+
+/* Subtle glow overlay */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 100, 0.05), transparent 80%);
+    z-index: 1;
+}
