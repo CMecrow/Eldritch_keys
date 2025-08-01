@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Eldritch Keys</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+</head>
+<body>
+<header class="banner">
+    <h1>Eldritch Keys</h1>
+</header>
+<nav>
+    <a href="/">Home</a>
+    <a href="/org">Organisation Structure</a>
+    <a href="/data">ERP Modules</a>
+    <a href="/path">Sales Journey</a>
+</nav>
+<div>
+    <h3>Sales Order</h3>
+    <hr>
+    <table class="materials">
+        <thead>
+        <tr>
+            <th>Field</th>
+            <th>Data</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Sales Order Number</td>
+            <td>1001</td>
+            <td>System-generated order number</td>
+        </tr>
+        <tr>
+            <td>Sales Organisation</td>
+            <td>S300</td>
+            <td>Sales Organisation for Eldritch Keys</td>
+        </tr>
+        <tr>
+            <td>Distribution Channel</td>
+            <td>20</td>
+            <td>Occult Retailers</td>
+        </tr>
+        <tr>
+            <td>Order Date</td>
+            <td>31/07/2025</td>
+            <td>Date order is created</td>
+        </tr>
+        <tr>
+            <td>Customer Code</td>
+            <td>CUS-002</td>
+            <td>Assigned Customer Code</td>
+        </tr>
+        <tr>
+            <td>Customer</td>
+            <td>Innsmouth Instruments</td>
+            <td>Provided Customer Name</td>
+        </tr>
+        <tr>
+            <td>Payment Terms</td>
+            <td>30 Days Net</td>
+            <td>When payment is due</td>
+        </tr>
+        <tr>
+            <td>Currency</td>
+            <td>GBP</td>
+            <td>Currency for transaction</td>
+        </tr>
+        <tr>
+            <td>Delivery Date</td>
+            <td>26/08/2025</td>
+            <td>Expected Delivery Date</td>
+        </tr>
+        <tr>
+            <td>Shipping Condition</td>
+            <td>Standard</td>
+            <td>Delivery urgency</td>
+        </tr>
+        <tr>
+            <td>Order Reason</td>
+            <td>Low stock</td>
+            <td>Customer given reason</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>He will rise again from the depths</td>
+            <td>Customer comments</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <h3>Items Ordered</h3>
+    <hr>
+    <table class="materials">
+        <thead>
+        <tr>
+            <th>Field</th>
+            <th>Data</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Material Number</td>
+            <td>MAT-001</td>
+            <td>Item ordered</td>
+        </tr>
+        <tr>
+            <td>Material Name</td>
+            <td>Leviathan Grand</td>
+            <td>Name of the product</td>
+        </tr>
+        <tr>
+            <td>Order Quantity</td>
+            <td>2</td>
+            <td>Quantity Ordered</td>
+        </tr>
+        <tr>
+            <td>Unit of Measure</td>
+            <td>Each</td>
+            <td>Applied unit of measure</td>
+        </tr>
+        <tr>
+            <td>Net Price</td>
+            <td>18000</td>
+            <td>Price per unit</td>
+        </tr>
+        <tr>
+            <td>Discount</td>
+            <td>None</td>
+            <td>Applicable discount</td>
+        </tr>
+        <tr>
+            <td>Plant</td>
+            <td>3000</td>
+            <td>Cornwall Manufacturing Plant</td>
+        </tr>
+        <tr>
+            <td>Storage Location</td>
+            <td>3000A</td>
+            <td>Dock Warehouse</td>
+        </tr>
+        <tr>
+            <td>Item Notes</td>
+            <td>Deliver with ritual packaging</td>
+            <td>Item specific notes</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <h3>Delivery</h3>
+    <hr>
+    <table class="materials">
+        <thead>
+        <tr>
+            <th>Field</th>
+            <th>Data</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Schedule Line</td>
+            <td>1</td>
+            <td>Sequential schedule number</td>
+        </tr>
+        <tr>
+            <td>Confirmed Quantity</td>
+            <td>2</td>
+            <td>Quantity for delivery</td>
+        </tr>
+        <tr>
+            <td>Delivery date</td>
+            <td>26/08/2025</td>
+            <td>Scheduled delivery date</td>
+        </tr>
+        <tr>
+            <td>Shipping Point</td>
+            <td>DOCKS</td>
+            <td>Location for shipment</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <h3>Invoice</h3>
+    <hr>
+    <table class="materials">
+        <thead>
+        <tr>
+            <th>Field</th>
+            <th>Data</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Invoice Number</td>
+            <td>INV-2025-001</td>
+            <td>Unique invoice ID</td>
+        </tr>
+        <tr>
+            <td>Sales Order Number</td>
+            <td>SO-2025-001</td>
+            <td>Sales Order</td>
+        </tr>
+        <tr>
+            <td>Customer Code</td>
+            <td>CUST-002</td>
+            <td>Stored Customer Number</td>
+        </tr>
+        <tr>
+            <td>Customer Name</td>
+            <td>Innsmouth Instruments</td>
+            <td>Provided Customer Name</td>
+        </tr>
+        <tr>
+            <td>Invoice Date</td>
+            <td>31/07/2025</td>
+            <td>Date invoice generated</td>
+        </tr>
+        <tr>
+            <td>Due Date</td>
+            <td>31/08/2025</td>
+            <td>Location for shipment</td>
+        </tr>
+        <tr>
+            <td>Payment Terms</td>
+            <td>30 Days Net</td>
+            <td>Standard payment condition</td>
+        </tr>
+        <tr>
+            <td>Material Code</td>
+            <td>MAT-001</td>
+            <td>Ordered material</td>
+        </tr>
+        <tr>
+            <td>Material Name</td>
+            <td>Leviathan Grand</td>
+            <td>Ordered Item</td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td>2</td>
+            <td>Number of items sold</td>
+        </tr>
+        <tr>
+            <td>Unit Price</td>
+            <td>18,000</td>
+            <td>Price per unit</td>
+        </tr>
+        <tr>
+            <td>Total Amount</td>
+            <td>36,000</td>
+            <td>Total line item cost</td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td>9,200</td>
+            <td>Tax at 20%</td>
+        </tr>
+        <tr>
+            <td>Grand total</td>
+            <td>43,200</td>
+            <td>Location for shipment</td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>Open</td>
+            <td>Invoice Status</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+</body>
+</html>
